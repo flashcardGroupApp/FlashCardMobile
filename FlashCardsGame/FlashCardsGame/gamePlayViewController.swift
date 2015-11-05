@@ -35,6 +35,12 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
     
     @IBAction func okayButton(sender: AnyObject) {
         
+        func resetTimer() {
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("Update"), userInfo: "timer", repeats: true)
+            
+        }
+        
     }
     
     
@@ -52,11 +58,11 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
             timer?.invalidate()
          
 //            timerLabel.text = ""
-            
+           
         }
         
         print("boom")
-        
+       
       
     
 

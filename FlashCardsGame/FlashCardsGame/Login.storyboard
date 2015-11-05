@@ -9,7 +9,7 @@
         <!--Login View Controller-->
         <scene sceneID="Ihz-cv-SyP">
             <objects>
-                <viewController id="2Ce-VE-5Ms" customClass="LoginViewController" customModule="FlashCardsGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Start" id="2Ce-VE-5Ms" customClass="LoginViewController" customModule="FlashCardsGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LhH-la-h5k"/>
                         <viewControllerLayoutGuide type="bottom" id="WuW-3S-jNb"/>
@@ -95,7 +95,7 @@
         <!--Login View Controller-->
         <scene sceneID="jru-yX-n5d">
             <objects>
-                <viewController id="WYC-0G-3Qr" customClass="LoginViewController" customModule="FlashCardsGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="WYC-0G-3Qr" customClass="LoginViewController" customModule="FlashCardsGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MYy-i7-ILU"/>
                         <viewControllerLayoutGuide type="bottom" id="cvd-bW-6uT"/>
@@ -161,12 +161,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERs-zb-STC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2057" y="96"/>
+            <point key="canvasLocation" x="2057" y="124"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="q2E-c2-kUN">
             <objects>
-                <viewController id="T9G-hg-SbP" customClass="LoginViewController" customModule="FlashCardsGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Register" id="T9G-hg-SbP" customClass="LoginViewController" customModule="FlashCardsGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Go6-UW-2ky"/>
                         <viewControllerLayoutGuide type="bottom" id="S0A-sL-HVn"/>
@@ -245,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcd-xL-AHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2057" y="740"/>
+            <point key="canvasLocation" x="2057" y="774"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2iz-5T-Gi7">
