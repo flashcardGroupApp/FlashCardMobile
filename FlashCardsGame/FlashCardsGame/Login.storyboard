@@ -6,24 +6,24 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Ihz-cv-SyP">
             <objects>
-                <viewController id="2Ce-VE-5Ms" sceneMemberID="viewController">
+                <viewController id="2Ce-VE-5Ms" customClass="LoginViewController" customModule="FlashCardsGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LhH-la-h5k"/>
                         <viewControllerLayoutGuide type="bottom" id="WuW-3S-jNb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="p7c-b5-f7f">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xi7-y5-Xci" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
-                                <rect key="frame" x="20" y="465" width="560" height="50"/>
+                                <rect key="frame" x="16" y="433" width="288" height="50"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.19215686269999999" green="0.57647058819999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.4823529411764706" green="0.85882352941176465" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="c0D-du-c6z"/>
+                                    <constraint firstAttribute="height" constant="50" id="V5p-vg-n5J"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="LOGIN">
@@ -34,7 +34,7 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -42,11 +42,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiY-a9-1zH" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
-                                <rect key="frame" x="20" y="530" width="560" height="50"/>
+                                <rect key="frame" x="16" y="498" width="288" height="50"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.4823529411764706" green="0.85882352941176465" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1Zb-VD-I93"/>
+                                    <constraint firstAttribute="height" constant="50" id="FON-Na-Krp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="REGISTER">
@@ -57,40 +57,40 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="T9G-hg-SbP" kind="show" id="mVD-y9-BDt"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="MCT-Wv-c9g">
-                                <rect key="frame" x="180" y="196" width="240" height="208"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="MCT-Wv-c9g">
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="208" id="dQQ-RS-FIK"/>
-                                    <constraint firstAttribute="width" constant="240" id="xbc-XH-CpH"/>
-                                </constraints>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MCT-Wv-c9g" firstAttribute="centerY" secondItem="p7c-b5-f7f" secondAttribute="centerY" id="1eV-Vv-I3g"/>
-                            <constraint firstItem="OiY-a9-1zH" firstAttribute="leading" secondItem="p7c-b5-f7f" secondAttribute="leadingMargin" id="1jl-50-hB2"/>
-                            <constraint firstItem="MCT-Wv-c9g" firstAttribute="centerX" secondItem="p7c-b5-f7f" secondAttribute="centerX" id="6Vg-fS-CPD"/>
-                            <constraint firstItem="OiY-a9-1zH" firstAttribute="trailing" secondItem="p7c-b5-f7f" secondAttribute="trailingMargin" id="Iht-Y2-6bu"/>
-                            <constraint firstItem="xi7-y5-Xci" firstAttribute="leading" secondItem="p7c-b5-f7f" secondAttribute="leadingMargin" id="Rh1-Sx-pGW"/>
-                            <constraint firstItem="WuW-3S-jNb" firstAttribute="top" secondItem="OiY-a9-1zH" secondAttribute="bottom" constant="20" id="YFZ-VV-wue"/>
-                            <constraint firstItem="OiY-a9-1zH" firstAttribute="top" secondItem="xi7-y5-Xci" secondAttribute="bottom" constant="15" id="nXm-Ll-GpM"/>
-                            <constraint firstItem="xi7-y5-Xci" firstAttribute="trailing" secondItem="p7c-b5-f7f" secondAttribute="trailingMargin" id="phd-ny-XEd"/>
+                            <constraint firstAttribute="trailing" secondItem="OiY-a9-1zH" secondAttribute="trailing" constant="16" id="2sh-3q-nw4"/>
+                            <constraint firstItem="OiY-a9-1zH" firstAttribute="leading" secondItem="p7c-b5-f7f" secondAttribute="leading" constant="16" id="BNW-Hn-tyl"/>
+                            <constraint firstItem="MCT-Wv-c9g" firstAttribute="centerY" secondItem="p7c-b5-f7f" secondAttribute="centerY" id="E4L-Z9-ffp"/>
+                            <constraint firstItem="MCT-Wv-c9g" firstAttribute="leading" secondItem="p7c-b5-f7f" secondAttribute="leading" constant="60" id="EHz-TR-FBB"/>
+                            <constraint firstAttribute="trailing" secondItem="MCT-Wv-c9g" secondAttribute="trailing" constant="60" id="alI-O7-eUT"/>
+                            <constraint firstItem="xi7-y5-Xci" firstAttribute="top" secondItem="MCT-Wv-c9g" secondAttribute="bottom" constant="49" id="diO-e2-nye"/>
+                            <constraint firstItem="MCT-Wv-c9g" firstAttribute="top" secondItem="LhH-la-h5k" secondAttribute="bottom" constant="120" id="dkn-lf-NLI"/>
+                            <constraint firstItem="OiY-a9-1zH" firstAttribute="top" secondItem="xi7-y5-Xci" secondAttribute="bottom" constant="15" id="gkx-xF-Bcm"/>
+                            <constraint firstItem="xi7-y5-Xci" firstAttribute="leading" secondItem="p7c-b5-f7f" secondAttribute="leading" constant="16" id="gon-ZW-NqS"/>
+                            <constraint firstAttribute="trailing" secondItem="xi7-y5-Xci" secondAttribute="trailing" constant="16" id="m8T-aA-ydz"/>
+                            <constraint firstItem="WuW-3S-jNb" firstAttribute="top" secondItem="OiY-a9-1zH" secondAttribute="bottom" constant="20" id="o5R-0X-1OS"/>
+                            <constraint firstItem="MCT-Wv-c9g" firstAttribute="centerX" secondItem="p7c-b5-f7f" secondAttribute="centerX" id="oF9-ow-wqD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Pkx-iu-BXI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNR-Z6-uBO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1619" y="436"/>
+            <point key="canvasLocation" x="1618.5" y="435.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="jru-yX-n5d">
@@ -101,13 +101,13 @@
                         <viewControllerLayoutGuide type="bottom" id="cvd-bW-6uT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gNK-Qw-R3a">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJp-Dh-5wz" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
-                                <rect key="frame" x="20" y="530" width="560" height="50"/>
+                                <rect key="frame" x="16" y="498" width="288" height="50"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.19215686274509802" green="0.57647058823529407" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.4823529411764706" green="0.85882352941176465" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="FfM-QY-Etq"/>
                                 </constraints>
@@ -120,7 +120,7 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -128,17 +128,14 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQg-Aa-f9D">
-                                <rect key="frame" x="20" y="495" width="560" height="30"/>
+                                <rect key="frame" x="16" y="463" width="288" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bcs-25-9Tg">
-                                <rect key="frame" x="20" y="457" width="560" height="30"/>
+                                <rect key="frame" x="16" y="425" width="288" height="30"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="560" id="wkj-ai-sox"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -164,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERs-zb-STC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2335" y="111"/>
+            <point key="canvasLocation" x="2057" y="96"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="q2E-c2-kUN">
@@ -175,13 +172,13 @@
                         <viewControllerLayoutGuide type="bottom" id="S0A-sL-HVn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ajS-Vd-eZO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibC-Pf-C7W" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
-                                <rect key="frame" x="20" y="530" width="560" height="50"/>
+                                <rect key="frame" x="16" y="498" width="288" height="50"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.19215686274509802" green="0.57647058823529407" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.4823529411764706" green="0.85882352941176465" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bqM-Dv-urd"/>
                                 </constraints>
@@ -193,28 +190,28 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="pressedRegister:" destination="T9G-hg-SbP" eventType="touchUpInside" id="o6E-lc-Qi5"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-MAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cWw-5d-zyT">
-                                <rect key="frame" x="20" y="495" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="And an E-MAIL just in case..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cWw-5d-zyT">
+                                <rect key="frame" x="16" y="463" width="288" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DyD-wb-xaG">
-                                <rect key="frame" x="20" y="457" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DyD-wb-xaG">
+                                <rect key="frame" x="16" y="425" width="288" height="30"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="560" id="ewW-VA-eka"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lON-0W-shw">
-                                <rect key="frame" x="20" y="419" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create Your USERNAME Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lON-0W-shw">
+                                <rect key="frame" x="16" y="387" width="288" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="pot-o3-Vb5"/>
@@ -248,13 +245,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcd-xL-AHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2335" y="751"/>
+            <point key="canvasLocation" x="2057" y="740"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2iz-5T-Gi7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bOM-Sv-FXR" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oG6-an-wGH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -267,10 +265,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nV3-jM-vFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="436"/>
+            <point key="canvasLocation" x="1231" y="435"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="122" height="122"/>
+        <image name="Logo" width="150" height="140"/>
     </resources>
 </document>
