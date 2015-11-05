@@ -35,14 +35,21 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
     
     @IBAction func okayButton(sender: AnyObject) {
         
-        func resetTimer() {
-            
-            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("Update"), userInfo: "timer", repeats: true)
-            
-        }
+        resetTimer()
+        
         
     }
     
+    
+    func resetTimer() {
+        
+        timer?.invalidate()
+        
+        seconds = 0
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        
+    }
     
     
     
