@@ -8,36 +8,67 @@
 
 import UIKit
 
-class gamePlayViewController: UIViewController {
-    
-    @IBOutlet weak var timerTextField: UITextField!
-    
-    @IBOutlet weak var questionView: UIView!
+class gamePlayViewController: UIViewController, UITextFieldDelegate  {
     
     
-    @IBAction func okayButton(button: AnyObject) {
-    }
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    var timer: NSTimer?
+    var seconds = 0
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    
 
+    
+    @IBOutlet weak var answerTextField: UITextField!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        
+        print("timer created")
+        
+    
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func okayButton(sender: AnyObject) {
+        
     }
-    */
+    
+    
+    
+    
+    
+    func update() {
+        
+        seconds++
+        
+        timerLabel.text = "\(seconds)"
+        
+        if seconds == 10 {
+            
+            timer?.invalidate()
+         
+//            timerLabel.text = ""
+            
+        }
+        
+        print("boom")
+        
+      
+    
 
+    }
+ 
+    
+            
+    
 }
+
+
+        // Do any additional setup after loading the view.
+
+
+
