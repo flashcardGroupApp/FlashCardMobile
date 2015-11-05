@@ -18,6 +18,7 @@
 		4465B7E91BEAB9420052AA22 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4465B7E71BEAB9420052AA22 /* Login.storyboard */; };
 		4465B7EA1BEAB9420052AA22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465B7E81BEAB9420052AA22 /* LoginViewController.swift */; };
 		4465B7EC1BEAB9820052AA22 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465B7EB1BEAB9820052AA22 /* MainButton.swift */; };
+		4465B80E1BEBC0510052AA22 /* RailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465B80D1BEBC0510052AA22 /* RailsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4465B7E71BEAB9420052AA22 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4465B7E81BEAB9420052AA22 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4465B7EB1BEAB9820052AA22 /* MainButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainButton.swift; path = ../MainButton.swift; sourceTree = "<group>"; };
+		4465B80D1BEBC0510052AA22 /* RailsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				4465B7D51BEAB8190052AA22 /* AppDelegate.swift */,
 				4465B7EB1BEAB9820052AA22 /* MainButton.swift */,
 				4465B7E71BEAB9420052AA22 /* Login.storyboard */,
+				4465B80D1BEBC0510052AA22 /* RailsRequest.swift */,
 				4465B7E81BEAB9420052AA22 /* LoginViewController.swift */,
 				4465B7D71BEAB8190052AA22 /* ViewController.swift */,
 				4465B7D91BEAB8190052AA22 /* Main.storyboard */,
@@ -159,6 +162,7 @@
 				4465B7EC1BEAB9820052AA22 /* MainButton.swift in Sources */,
 				4465B7EA1BEAB9420052AA22 /* LoginViewController.swift in Sources */,
 				3D741D481BEACE8B003192BD /* gamePlayViewController.swift in Sources */,
+				4465B80E1BEBC0510052AA22 /* RailsRequest.swift in Sources */,
 				4465B7D81BEAB8190052AA22 /* ViewController.swift in Sources */,
 				4465B7D61BEAB8190052AA22 /* AppDelegate.swift in Sources */,
 				3D741D461BEACAED003192BD /* flashGameViewController.swift in Sources */,
