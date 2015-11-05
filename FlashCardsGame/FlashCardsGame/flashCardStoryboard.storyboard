@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rKg-sQ-XTG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Flash Game View Controller-->
+        <scene sceneID="KIQ-aO-VS7">
+            <objects>
+                <viewController storyboardIdentifier="Game" id="ch6-RC-Q7b" customClass="flashGameViewController" customModule="FlashCardsGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T8R-Mb-1X0"/>
+                        <viewControllerLayoutGuide type="bottom" id="q3d-Rc-8g5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YO7-3m-yjK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQO-1K-9Kw" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
+                                <rect key="frame" x="20" y="298" width="130" height="160"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.70222335979999995" green="1" blue="0.71817650519999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="4RE-4f-8qS"/>
+                                    <constraint firstAttribute="width" constant="130" id="EBc-Xl-dma"/>
+                                </constraints>
+                                <state key="normal" title="3rd">
+                                    <color key="titleColor" red="1" green="0.65161732780000003" blue="0.14305658099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weh-3E-eOB" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
+                                <rect key="frame" x="20" y="113" width="130" height="160"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.70222335979999995" green="1" blue="0.71817650519999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="ojg-UB-USL"/>
+                                    <constraint firstAttribute="width" constant="130" id="znA-nZ-2Vm"/>
+                                </constraints>
+                                <state key="normal" title="1st">
+                                    <color key="titleColor" red="1" green="0.65161732780000003" blue="0.14305658099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqh-B7-HRr" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
+                                <rect key="frame" x="170" y="113" width="130" height="160"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.70222335979999995" green="1" blue="0.71817650519999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="YGx-52-bBP"/>
+                                    <constraint firstAttribute="width" constant="130" id="nFv-DX-pwb"/>
+                                </constraints>
+                                <state key="normal" title="2nd">
+                                    <color key="titleColor" red="1" green="0.65161732780000003" blue="0.14305658099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwI-d1-ycX" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
+                                <rect key="frame" x="170" y="298" width="130" height="160"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.70222335979999995" green="1" blue="0.71817650519999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="1yF-Fd-cim"/>
+                                    <constraint firstAttribute="width" constant="130" id="vlo-v4-eZP"/>
+                                </constraints>
+                                <state key="normal" title="4th">
+                                    <color key="titleColor" red="1" green="0.65161732780000003" blue="0.14305658099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yQO-1K-9Kw" firstAttribute="leading" secondItem="YO7-3m-yjK" secondAttribute="leading" constant="20" id="3hR-dZ-XMq"/>
+                            <constraint firstItem="weh-3E-eOB" firstAttribute="top" secondItem="T8R-Mb-1X0" secondAttribute="bottom" constant="93" id="Dzj-T7-4xp"/>
+                            <constraint firstItem="weh-3E-eOB" firstAttribute="leading" secondItem="YO7-3m-yjK" secondAttribute="leading" constant="20" id="E3F-bI-8Da"/>
+                            <constraint firstItem="Nqh-B7-HRr" firstAttribute="top" secondItem="T8R-Mb-1X0" secondAttribute="bottom" constant="93" id="GK2-3X-FXI"/>
+                            <constraint firstAttribute="trailing" secondItem="Nqh-B7-HRr" secondAttribute="trailing" constant="20" id="LZ0-9J-46f"/>
+                            <constraint firstItem="q3d-Rc-8g5" firstAttribute="top" secondItem="KwI-d1-ycX" secondAttribute="bottom" constant="110" id="Mmm-VC-HPm"/>
+                            <constraint firstAttribute="trailing" secondItem="KwI-d1-ycX" secondAttribute="trailing" constant="20" id="YpY-fs-JKR"/>
+                            <constraint firstItem="q3d-Rc-8g5" firstAttribute="top" secondItem="yQO-1K-9Kw" secondAttribute="bottom" constant="110" id="q8Z-uI-LtJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2UL-Bs-Tyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="639" y="11"/>
+        </scene>
+        <!--Game Play View Controller-->
+        <scene sceneID="oiE-ks-lb8">
+            <objects>
+                <viewController id="rKg-sQ-XTG" customClass="gamePlayViewController" customModule="FlashCardsGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jVq-YR-y83"/>
+                        <viewControllerLayoutGuide type="bottom" id="oZ0-PA-uNs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1yT-lD-Moc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PjO-Tr-f71">
+                                <rect key="frame" x="20" y="140" width="560" height="196"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-ad-qXl">
+                                        <rect key="frame" x="42" y="31" width="476" height="133"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.65161732780000003" blue="0.14305658099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.70222335979999995" green="1" blue="0.71817650519999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="2uV-cS-rYh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hmn-ad-qXl" secondAttribute="trailing" constant="42" id="3O2-p3-1hb"/>
+                                    <constraint firstItem="Hmn-ad-qXl" firstAttribute="leading" secondItem="PjO-Tr-f71" secondAttribute="leading" constant="42" id="64M-QU-bxg"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hmn-ad-qXl" secondAttribute="bottom" constant="32" id="ADu-Dc-S74"/>
+                                    <constraint firstItem="Hmn-ad-qXl" firstAttribute="top" secondItem="PjO-Tr-f71" secondAttribute="top" constant="31" id="csY-tj-sO7"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYR-qi-l1b">
+                                <rect key="frame" x="20" y="422" width="420" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="420" id="LdW-7t-2hI"/>
+                                    <constraint firstAttribute="height" constant="50" id="lOG-Gy-AiN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXD-Q1-Spz" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
+                                <rect key="frame" x="480" y="407" width="100" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.70222335979999995" green="1" blue="0.71817650519999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6Hc-GY-ZIh"/>
+                                    <constraint firstAttribute="width" constant="100" id="hKy-Kt-KDJ"/>
+                                </constraints>
+                                <state key="normal" title="OK"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUJ-Xa-lCS">
+                                <rect key="frame" x="20" y="20" width="150" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jkQ-Rw-OW8"/>
+                                    <constraint firstAttribute="width" constant="150" id="zI6-34-zhe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FUJ-Xa-lCS" firstAttribute="leading" secondItem="1yT-lD-Moc" secondAttribute="leading" constant="20" id="1hg-E6-92I"/>
+                            <constraint firstItem="oZ0-PA-uNs" firstAttribute="top" secondItem="PYR-qi-l1b" secondAttribute="bottom" constant="128" id="27d-3R-hZA"/>
+                            <constraint firstAttribute="trailing" secondItem="dXD-Q1-Spz" secondAttribute="trailing" constant="20" id="2NE-TQ-77k"/>
+                            <constraint firstItem="FUJ-Xa-lCS" firstAttribute="top" secondItem="jVq-YR-y83" secondAttribute="bottom" id="6Il-bB-0dD"/>
+                            <constraint firstItem="PjO-Tr-f71" firstAttribute="leading" secondItem="1yT-lD-Moc" secondAttribute="leading" constant="20" id="7O4-R4-8kl"/>
+                            <constraint firstItem="PjO-Tr-f71" firstAttribute="centerY" secondItem="1yT-lD-Moc" secondAttribute="centerY" constant="-62" id="8wF-sC-DvP"/>
+                            <constraint firstItem="oZ0-PA-uNs" firstAttribute="top" secondItem="dXD-Q1-Spz" secondAttribute="bottom" constant="93" id="EFA-Oz-oOV"/>
+                            <constraint firstAttribute="trailing" secondItem="PjO-Tr-f71" secondAttribute="trailing" constant="20" id="oXd-zh-iu5"/>
+                            <constraint firstItem="PYR-qi-l1b" firstAttribute="leading" secondItem="1yT-lD-Moc" secondAttribute="leading" constant="20" id="yEs-AQ-Vh9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="questionView" destination="PjO-Tr-f71" id="ax8-SQ-Z30"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JPA-I8-dNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285" y="-39"/>
+        </scene>
+    </scenes>
+</document>

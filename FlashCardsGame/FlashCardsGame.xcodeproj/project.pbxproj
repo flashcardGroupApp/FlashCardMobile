@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D741D421BEAC587003192BD /* flashCardStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D741D411BEAC587003192BD /* flashCardStoryboard.storyboard */; };
+		3D741D461BEACAED003192BD /* flashGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D741D451BEACAED003192BD /* flashGameViewController.swift */; };
+		3D741D481BEACE8B003192BD /* gamePlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D741D471BEACE8B003192BD /* gamePlayViewController.swift */; };
 		4465B7D61BEAB8190052AA22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465B7D51BEAB8190052AA22 /* AppDelegate.swift */; };
 		4465B7D81BEAB8190052AA22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465B7D71BEAB8190052AA22 /* ViewController.swift */; };
 		4465B7DB1BEAB8190052AA22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4465B7D91BEAB8190052AA22 /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D741D411BEAC587003192BD /* flashCardStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = flashCardStoryboard.storyboard; sourceTree = "<group>"; };
+		3D741D451BEACAED003192BD /* flashGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flashGameViewController.swift; sourceTree = "<group>"; };
+		3D741D471BEACE8B003192BD /* gamePlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gamePlayViewController.swift; sourceTree = "<group>"; };
 		4465B7D21BEAB8190052AA22 /* FlashCardsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCardsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4465B7D51BEAB8190052AA22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4465B7D71BEAB8190052AA22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,9 @@
 				4465B7DC1BEAB8190052AA22 /* Assets.xcassets */,
 				4465B7DE1BEAB8190052AA22 /* LaunchScreen.storyboard */,
 				4465B7E11BEAB8190052AA22 /* Info.plist */,
+				3D741D411BEAC587003192BD /* flashCardStoryboard.storyboard */,
+				3D741D451BEACAED003192BD /* flashGameViewController.swift */,
+				3D741D471BEACE8B003192BD /* gamePlayViewController.swift */,
 			);
 			path = FlashCardsGame;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 			files = (
 				4465B7E91BEAB9420052AA22 /* Login.storyboard in Resources */,
 				4465B7E01BEAB8190052AA22 /* LaunchScreen.storyboard in Resources */,
+				3D741D421BEAC587003192BD /* flashCardStoryboard.storyboard in Resources */,
 				4465B7DD1BEAB8190052AA22 /* Assets.xcassets in Resources */,
 				4465B7DB1BEAB8190052AA22 /* Main.storyboard in Resources */,
 			);
@@ -148,8 +158,10 @@
 			files = (
 				4465B7EC1BEAB9820052AA22 /* MainButton.swift in Sources */,
 				4465B7EA1BEAB9420052AA22 /* LoginViewController.swift in Sources */,
+				3D741D481BEACE8B003192BD /* gamePlayViewController.swift in Sources */,
 				4465B7D81BEAB8190052AA22 /* ViewController.swift in Sources */,
 				4465B7D61BEAB8190052AA22 /* AppDelegate.swift in Sources */,
+				3D741D461BEACAED003192BD /* flashGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +309,7 @@
 				4465B7E61BEAB8190052AA22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

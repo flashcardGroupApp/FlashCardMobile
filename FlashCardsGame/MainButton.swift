@@ -19,14 +19,14 @@ import UIKit
             
             layer.cornerRadius = cornerRadius
             layer.masksToBounds = true
-//            layer.borderWidth = borderWidth
-//            layer.borderColor = borderColor
+            layer.borderWidth = borderWidth
+            layer.borderColor = borderColor
             
         }
         
-//        @IBInspectable var borderWidth: CGFloat = 0
+        @IBInspectable var borderWidth: CGFloat = 0
     
-//        @IBInspectable var borderColor: CGColor = UIColor.purpleColor().CGColor
+        @IBInspectable var borderColor: CGColor = UIColor.blackColor().CGColor
     }
     
     /*
