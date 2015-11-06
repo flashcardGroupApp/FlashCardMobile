@@ -114,14 +114,14 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yQO-1K-9Kw" firstAttribute="leading" secondItem="YO7-3m-yjK" secondAttribute="leading" constant="20" id="3hR-dZ-XMq"/>
-                            <constraint firstItem="weh-3E-eOB" firstAttribute="top" secondItem="T8R-Mb-1X0" secondAttribute="bottom" constant="93" id="Dzj-T7-4xp"/>
-                            <constraint firstItem="weh-3E-eOB" firstAttribute="leading" secondItem="YO7-3m-yjK" secondAttribute="leading" constant="20" id="E3F-bI-8Da"/>
-                            <constraint firstItem="Nqh-B7-HRr" firstAttribute="top" secondItem="T8R-Mb-1X0" secondAttribute="bottom" constant="93" id="GK2-3X-FXI"/>
-                            <constraint firstAttribute="trailing" secondItem="Nqh-B7-HRr" secondAttribute="trailing" constant="20" id="LZ0-9J-46f"/>
-                            <constraint firstItem="q3d-Rc-8g5" firstAttribute="top" secondItem="KwI-d1-ycX" secondAttribute="bottom" constant="110" id="Mmm-VC-HPm"/>
-                            <constraint firstAttribute="trailing" secondItem="KwI-d1-ycX" secondAttribute="trailing" constant="20" id="YpY-fs-JKR"/>
-                            <constraint firstItem="q3d-Rc-8g5" firstAttribute="top" secondItem="yQO-1K-9Kw" secondAttribute="bottom" constant="110" id="q8Z-uI-LtJ"/>
+                            <constraint firstItem="KwI-d1-ycX" firstAttribute="centerX" secondItem="YO7-3m-yjK" secondAttribute="centerX" constant="75" id="5JW-9m-dYE"/>
+                            <constraint firstItem="Nqh-B7-HRr" firstAttribute="centerX" secondItem="YO7-3m-yjK" secondAttribute="centerX" constant="75" id="8re-h5-pHD"/>
+                            <constraint firstItem="yQO-1K-9Kw" firstAttribute="centerY" secondItem="YO7-3m-yjK" secondAttribute="centerY" constant="94" id="9Xc-iS-IsH"/>
+                            <constraint firstItem="KwI-d1-ycX" firstAttribute="centerY" secondItem="YO7-3m-yjK" secondAttribute="centerY" constant="94" id="gCe-Al-kBD"/>
+                            <constraint firstItem="yQO-1K-9Kw" firstAttribute="centerX" secondItem="YO7-3m-yjK" secondAttribute="centerX" constant="-75" id="gZs-th-hZk"/>
+                            <constraint firstItem="Nqh-B7-HRr" firstAttribute="centerY" secondItem="YO7-3m-yjK" secondAttribute="centerY" constant="-91" id="lee-2d-QYQ"/>
+                            <constraint firstItem="weh-3E-eOB" firstAttribute="centerY" secondItem="YO7-3m-yjK" secondAttribute="centerY" constant="-91" id="p8X-t7-dh6"/>
+                            <constraint firstItem="weh-3E-eOB" firstAttribute="centerX" secondItem="YO7-3m-yjK" secondAttribute="centerX" constant="-75" id="xJl-9F-LPl"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
