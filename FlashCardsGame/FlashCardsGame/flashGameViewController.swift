@@ -24,9 +24,13 @@ class flashGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         scoreLabel.text = "Time: \(totalTime)"
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+    
+        self.navigationController?.navigationBarHidden = true
         
         var info = RequestInfo()
         
@@ -37,14 +41,31 @@ class flashGameViewController: UIViewController {
         
         RailsRequest.session().requiredWithInfo(info) { (returnedInfo) -> () in
             
-            if let decks = returnedInfo?["decks"] as? [[String:AnyObject]] {
+            print(returnedInfo)
+            
+            
+            if let decks = returnedInfo as? [[String:AnyObject]] {
                 
+                let deck1 = decks[0]
                 
-               
+                self.firstDeck?.setTitle(deck1["title"] as? String, forState: .Normal)
+                
+                let deck2 = decks[1]
+                
+                self.secondDeck?.setTitle(deck2["title"] as? String, forState: .Normal)
+             
+                let deck3 = decks[2]
+                
+                self.thirdDeck?.setTitle(deck3["title"] as? String, forState: .Normal)
+                
+                let deck4 = decks[3]
+                
+                self.fourthDeck?.setTitle(deck4["title"] as? String, forState: .Normal)
             }
             
             
             if let errors = returnedInfo?["errors"] as? [String] {
+                
                 //loops through errors
             }
             
@@ -57,10 +78,6 @@ class flashGameViewController: UIViewController {
     }
 
     @IBAction func pressedButton(sender: AnyObject) {
-        
-        
-
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "flashGameViewController", bundle:nil)
         
         let gamePlayVC = storyboard?.instantiateViewControllerWithIdentifier("gamePlayVC") as! gamePlayViewController
         
