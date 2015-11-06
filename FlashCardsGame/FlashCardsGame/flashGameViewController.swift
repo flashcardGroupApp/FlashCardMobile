@@ -10,19 +10,23 @@ import UIKit
 
 class flashGameViewController: UIViewController {
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     @IBOutlet weak var firstDeck: MainButton!
-    
-    
-    
     @IBOutlet weak var secondDeck: MainButton!
-    
     @IBOutlet weak var thirdDeck: MainButton!
-   
     @IBOutlet weak var fourthDeck: MainButton!
     
+    var totalTime: NSTimeInterval = 0
+    var seconds = 30
+    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        scoreLabel.text = "Time: \(totalTime)"
+        
         
         var info = RequestInfo()
         
@@ -49,14 +53,18 @@ class flashGameViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func switchSlider(sender: AnyObject) {
+    }
 
     @IBAction func pressedButton(sender: AnyObject) {
+        
+        
 
 //        let storyBoard: UIStoryboard = UIStoryboard(name: "flashGameViewController", bundle:nil)
         
-        let flashGameViewController = storyboard?.instantiateViewControllerWithIdentifier("gamePlayVC") as! gamePlayViewController
+        let gamePlayVC = storyboard?.instantiateViewControllerWithIdentifier("gamePlayVC") as! gamePlayViewController
         
-        self.presentViewController(flashGameViewController, animated:true, completion:nil)
+        self.presentViewController(gamePlayVC, animated:true, completion:nil)
      
     }
     

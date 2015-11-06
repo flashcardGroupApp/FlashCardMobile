@@ -8,68 +8,76 @@
 
 import UIKit
 
+
+
 class gamePlayViewController: UIViewController, UITextFieldDelegate  {
     
     
     @IBOutlet weak var timerLabel: UILabel!
     
     var timer: NSTimer?
-    var seconds = 0
+    var seconds = 30
+    var count = 0
+   
+    
     
     @IBOutlet weak var questionLabel: UILabel!
     
 
     
     @IBOutlet weak var answerTextField: UITextField!
+    
+//    var count = 0
+    
+    func setupGame()  {
+        seconds = 30
+        count = 0
+        
+        timerLabel.text = "Time: \(seconds)"
+//        scoreLabel.text = "Score: \(count)"
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("subtractTime"), userInfo: nil, repeats: true)
         
         print("timer created")
+        
         
     
         
     }
     
     @IBAction func okayButton(sender: AnyObject) {
-        
-        resetTimer()
-        
-        // check textfield == answer
+
         
     }
     
-    
-    func resetTimer() {
+    @IBAction func gameOver(sender: AnyObject) {
         
-        timer?.invalidate()
-        
-        seconds = 0
-        
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         
     }
-    
-    
-    
-    
-    func update() {
+
+    func subtractTime() {
+        seconds--
+        timerLabel.text = "Time: \(seconds)"
         
-        seconds++
-        
-        timerLabel.text = "\(seconds)"
-        
-        if seconds == 10 {
+        if(seconds == 0)  {
             
             timer?.invalidate()
-         
-//            timerLabel.text = ""
-           
+            
         }
         
         print("boom")
+    }
+    
+    
+    
+    
+
+    
+    
        
       
     
@@ -79,10 +87,9 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
     
             
     
-}
 
 
-        // Do any additional setup after loading the view.
+
 
 
 
