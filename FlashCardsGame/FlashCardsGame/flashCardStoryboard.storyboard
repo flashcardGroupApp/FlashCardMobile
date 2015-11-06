@@ -133,7 +133,7 @@
         <!--Game Play View Controller-->
         <scene sceneID="oiE-ks-lb8">
             <objects>
-                <viewController id="rKg-sQ-XTG" customClass="gamePlayViewController" customModule="FlashCardsGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gamePlayVC" id="rKg-sQ-XTG" customClass="gamePlayViewController" customModule="FlashCardsGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jVq-YR-y83"/>
                         <viewControllerLayoutGuide type="bottom" id="oZ0-PA-uNs"/>
