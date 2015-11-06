@@ -10,6 +10,15 @@ import UIKit
 
 class flashGameViewController: UIViewController {
     
+    @IBOutlet weak var firstDeck: MainButton!
+    
+    
+    
+    @IBOutlet weak var secondDeck: MainButton!
+    
+    @IBOutlet weak var thirdDeck: MainButton!
+   
+    @IBOutlet weak var fourthDeck: MainButton!
     
     
     override func viewDidLoad() {
@@ -17,14 +26,15 @@ class flashGameViewController: UIViewController {
         
         var info = RequestInfo()
         
-        info.endpoint = "/cards"
+        info.endpoint = "/decks"
         
-        info.method = .POST
+        info.method = .GET
         
         
         RailsRequest.session().requiredWithInfo(info) { (returnedInfo) -> () in
             
-            if let cards = returnedInfo?["cards"] as? [[String:AnyObject]] {
+            if let decks = returnedInfo?["decks"] as? [[String:AnyObject]] {
+                
                 
                
             }
@@ -41,14 +51,13 @@ class flashGameViewController: UIViewController {
     
 
     @IBAction func pressedButton(sender: AnyObject) {
+
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "flashGameViewController", bundle:nil)
         
+        let flashGameViewController = storyboard?.instantiateViewControllerWithIdentifier("gamePlayVC") as! gamePlayViewController
         
-        
+        self.presentViewController(flashGameViewController, animated:true, completion:nil)
+     
     }
     
-
-
- 
-    
-
 }
