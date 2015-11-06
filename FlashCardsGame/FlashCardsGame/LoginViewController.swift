@@ -33,7 +33,7 @@ class LoginViewController: UIViewController, UIWebViewDelegate {
         
 
         RailsRequest.session().loginWithUsername(username , andPassword: password)
-        print("Loged In")
+        print("loged in pressed")
     
     }
     
@@ -50,7 +50,7 @@ class LoginViewController: UIViewController, UIWebViewDelegate {
         
         RailsRequest.session().registerWithUsername(username, andPassword: password, email: email)
         
-        print("registered")
+        print("registered pressed")
             
         }
     

@@ -12,8 +12,6 @@ class flashGameViewController: UIViewController {
     
     @IBOutlet weak var firstDeck: MainButton!
     
-    
-    
     @IBOutlet weak var secondDeck: MainButton!
     
     @IBOutlet weak var thirdDeck: MainButton!
@@ -52,8 +50,6 @@ class flashGameViewController: UIViewController {
 
     @IBAction func pressedButton(sender: AnyObject) {
 
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "flashGameViewController", bundle:nil)
-        
         let flashGameViewController = storyboard?.instantiateViewControllerWithIdentifier("gamePlayVC") as! gamePlayViewController
         
         self.presentViewController(flashGameViewController, animated:true, completion:nil)
