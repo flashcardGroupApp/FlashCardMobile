@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Flash Game View Controller-->
+        <!--flashGameViewController-->
         <scene sceneID="KIQ-aO-VS7">
             <objects>
-                <viewController storyboardIdentifier="Game" id="ch6-RC-Q7b" customClass="flashGameViewController" customModule="FlashCardsGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gameVC" title="flashGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ch6-RC-Q7b" customClass="flashGameViewController" customModule="FlashCardsGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T8R-Mb-1X0"/>
                         <viewControllerLayoutGuide type="bottom" id="q3d-Rc-8g5"/>
@@ -125,6 +125,12 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="firstDeck" destination="weh-3E-eOB" id="CfD-z8-rVL"/>
+                        <outlet property="fourthDeck" destination="KwI-d1-ycX" id="s4B-IK-dor"/>
+                        <outlet property="secondDeck" destination="Nqh-B7-HRr" id="8Mr-1K-S6M"/>
+                        <outlet property="thirdDeck" destination="yQO-1K-9Kw" id="eER-Cr-j8I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2UL-Bs-Tyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

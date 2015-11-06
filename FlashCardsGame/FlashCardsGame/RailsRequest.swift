@@ -28,7 +28,7 @@ class RailsRequest: NSObject {
     //will need out own server info
     private let APIbaseURL = "http://secret-shore-7735.herokuapp.com"
     
-    func loginWithUsername(username: String, andPassword password: String) {
+    func loginWithUsername(username: String, andPassword password: String, completion: () -> ()) {
         
         var info = RequestInfo()
         
@@ -37,35 +37,37 @@ class RailsRequest: NSObject {
         info.method = .POST
         
         info.parameters = [
-        
+            
             "username" : username,
             "password" : password
             
         ]
- 
-       requiredWithInfo(info) { (returnedInfo) -> () in
         
-        if let user = returnedInfo?["user"] as? [String:AnyObject] {
+        requiredWithInfo(info) { (returnedInfo) -> () in
             
-            if let key = user["access_token"] as? String {
+            if let user = returnedInfo?["user"] as? [String:AnyObject] {
                 
-            
-            
-                self.token = key
-            
+                if let key = user["auth_token"] as? String {
+                    
+                    
+                    
+                    self.token = key
+                    
                 }
             }
-        
-        
-        if let errors = returnedInfo?["errors"] as? [String] {
-            //loops through errors
+            
+            
+            if let errors = returnedInfo?["errors"] as? [String] {
+                //loops through errors
             }
-    
+            
+            completion()
+            
         }
-    
+        
     }
     
-    func registerWithUsername(username: String, andPassword password: String, email: String) {
+    func registerWithUsername(username: String, andPassword password: String, email: String, completion: () -> ()) {
         
         var info = RequestInfo()
         
@@ -87,7 +89,7 @@ class RailsRequest: NSObject {
                 
                 print("user")
                 
-                if let key = user["access_token"] as? String {
+                if let key = user["auth_token"] as? String {
                     
                     self.token = key
                     
@@ -98,6 +100,8 @@ class RailsRequest: NSObject {
             if let errors = returnedInfo?["errors"] as? [String] {
                 //loops through errors
             }
+            
+            completion()
             
         }
         
@@ -120,20 +124,24 @@ class RailsRequest: NSObject {
         
         if let token = token {
             
-            request.setValue(token, forHTTPHeaderField: "Authorization")
+            request.setValue(token, forHTTPHeaderField: "Access-Token")
             
         }
         
-        if let requestData = try? NSJSONSerialization.dataWithJSONObject(info.parameters, options: .PrettyPrinted) {
-            
-            if let jsonString = NSString(data: requestData, encoding: NSUTF8StringEncoding) {
+        if info.parameters.count > 0 {
+        
+            if let requestData = try? NSJSONSerialization.dataWithJSONObject(info.parameters, options: .PrettyPrinted) {
                 
-                request.setValue("\(jsonString.length)", forHTTPHeaderField: "Content-Length")
-                
-                //possibly remove this line
-                let postData = jsonString.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
-                
-                request.HTTPBody = postData
+                if let jsonString = NSString(data: requestData, encoding: NSUTF8StringEncoding) {
+                    
+                    request.setValue("\(jsonString.length)", forHTTPHeaderField: "Content-Length")
+                    
+                    //possibly remove this line
+                    let postData = jsonString.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
+                    
+                    request.HTTPBody = postData
+                    
+                }
                 
             }
             
@@ -142,34 +150,39 @@ class RailsRequest: NSObject {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         //here we grab the access token & user id
-    
-
+        
+        
         
         // add parameters to body
         
         //creates a task from request
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
             
-            print(data)
-            print(error)
-            
-            //work with the data returned
-            if let data = data {
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
-                //have data
                 
-                if let returnedInfo = try? NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) {
+                print(data)
+                print(error)
+                
+                //work with the data returned
+                if let data = data {
                     
-                    print(returnedInfo)
-                    completion(returnedInfo: returnedInfo)
+                    //have data
+                    if let returnedInfo = try? NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) {
+                        
+                        print(returnedInfo)
+                        completion(returnedInfo: returnedInfo)
+                        
+                    }
+                    
+                } else {
+                    
+                    //no data: check if error is not nil
                     
                 }
                 
-            } else {
                 
-                //no data: check if error is not nil
-                
-            }
+            })
             
         }
         

@@ -31,9 +31,21 @@ class LoginViewController: UIViewController, UIWebViewDelegate {
         guard let username = usernameField.text else { return }
         //if they aren't empty
         
-
-        RailsRequest.session().loginWithUsername(username , andPassword: password)
         print("loged in pressed")
+
+        RailsRequest.session().loginWithUsername(username , andPassword: password, completion: {
+        
+            print("loged in finished")
+            
+            let loginSB = UIStoryboard(name: "flashCardStoryboard", bundle: nil)
+            
+            if let flashVC = loginSB.instantiateInitialViewController() {
+                
+                self.navigationController?.setViewControllers([flashVC], animated: true)
+            }
+        
+        })
+        
     
     }
     
@@ -46,13 +58,30 @@ class LoginViewController: UIViewController, UIWebViewDelegate {
         
         guard let email = emailField.text else { return }
         
+        print("registered pressed")
+
+        
         //send request to server to create registration
         
-        RailsRequest.session().registerWithUsername(username, andPassword: password, email: email)
-        
-        print("registered pressed")
+        RailsRequest.session().registerWithUsername(username, andPassword: password, email: email, completion: {
             
-        }
+            print("registered finished")
+
+            
+            
+            let loginSB = UIStoryboard(name: "flashCardStoryboard", bundle: nil)
+            
+            if let flashVC = loginSB.instantiateInitialViewController() {
+                
+                self.navigationController?.setViewControllers([flashVC], animated: true)
+            }
+        
+        })
+        
+
+        
+
+    }
     
     }
     
