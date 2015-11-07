@@ -18,37 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQO-1K-9Kw" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
-                                <rect key="frame" x="20" y="323" width="130" height="160"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weh-3E-eOB" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
+                                <rect key="frame" x="12" y="103" width="130" height="160"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.4823529411764706" green="0.85882352941176465" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="FSM-DC-mKg"/>
-                                    <constraint firstAttribute="height" constant="160" id="v5A-gw-lvg"/>
-                                </constraints>
-                                <state key="normal" title="3rd">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="25"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="pressedButton:" destination="ch6-RC-Q7b" eventType="touchUpInside" id="lA5-VL-JcH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weh-3E-eOB" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
-                                <rect key="frame" x="20" y="103" width="130" height="160"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.4823529411764706" green="0.85882352941176465" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="Eta-Wz-eth"/>
-                                    <constraint firstAttribute="height" constant="160" id="GLp-qu-NsD"/>
-                                </constraints>
                                 <state key="normal" title="1st">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -57,21 +30,17 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="pressedButton:" destination="ch6-RC-Q7b" eventType="touchUpInside" id="3eg-sI-Hxh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwI-d1-ycX" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwI-d1-ycX" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
                                 <rect key="frame" x="170" y="323" width="130" height="160"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.4823529411764706" green="0.85882352941176465" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="fWI-K9-YTR"/>
-                                    <constraint firstAttribute="height" constant="160" id="m2l-eV-mTS"/>
-                                </constraints>
                                 <state key="normal" title="4th">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -80,21 +49,17 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="pressedButton:" destination="ch6-RC-Q7b" eventType="touchUpInside" id="Jag-pe-ba0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqh-B7-HRr" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqh-B7-HRr" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
                                 <rect key="frame" x="170" y="103" width="130" height="160"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.4823529411764706" green="0.85882352941176465" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="Rzl-sY-pZw"/>
-                                    <constraint firstAttribute="width" constant="130" id="WWm-kr-8YD"/>
-                                </constraints>
                                 <state key="normal" title="2nd">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -103,75 +68,62 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="pressedButton:" destination="ch6-RC-Q7b" eventType="touchUpInside" id="n1m-xx-0CN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lne-gd-6vo">
-                                <rect key="frame" x="72" y="10" width="176" height="55"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.70222335979999995" green="1" blue="0.71817650519999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="0Fd-cD-YuQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KtH-BX-4PB">
-                                <rect key="frame" x="136" y="279" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KtH-BX-4PB">
+                                <rect key="frame" x="130" y="278" width="51" height="31"/>
                                 <animations/>
                                 <connections>
                                     <action selector="switchSlider:" destination="ch6-RC-Q7b" eventType="valueChanged" id="ouv-9h-Liv"/>
                                 </connections>
                             </switch>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="HARD" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iR9-zP-Dye">
-                                <rect key="frame" x="203" y="279" width="97" height="31"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cake walk" translatesAutoresizingMaskIntoConstraints="NO" id="yhX-T2-2gQ">
+                                <rect key="frame" x="22" y="276" width="96" height="35"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="AhF-vg-944"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EASY" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="12n-lz-Mhr">
-                                <rect key="frame" x="20" y="279" width="97" height="31"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="biohazard" translatesAutoresizingMaskIntoConstraints="NO" id="Yma-1i-NhA">
+                                <rect key="frame" x="191" y="276" width="96" height="35"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="Uuj-2L-FkB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-Iz-8dc">
+                                <rect key="frame" x="14" y="493" width="288" height="55"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lne-gd-6vo">
+                                <rect key="frame" x="14" y="28" width="288" height="55"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.29411764705882354" green="0.84313725490196079" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQO-1K-9Kw" customClass="MainButton" customModule="FlashCardsGame" customModuleProvider="target">
+                                <rect key="frame" x="12" y="323" width="130" height="160"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.4823529411764706" green="0.85882352941176465" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="3rd">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pressedButton:" destination="ch6-RC-Q7b" eventType="touchUpInside" id="lA5-VL-JcH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="lne-gd-6vo" secondAttribute="trailing" constant="56" id="3UB-zd-NED"/>
-                            <constraint firstItem="lne-gd-6vo" firstAttribute="leading" secondItem="YO7-3m-yjK" secondAttribute="leadingMargin" constant="56" id="5Ll-jZ-sAB"/>
-                            <constraint firstItem="weh-3E-eOB" firstAttribute="centerY" secondItem="YO7-3m-yjK" secondAttribute="centerY" constant="-101" id="Axd-kw-AsZ"/>
-                            <constraint firstItem="iR9-zP-Dye" firstAttribute="leading" secondItem="KtH-BX-4PB" secondAttribute="trailing" constant="18" id="Jd0-mf-4bR"/>
-                            <constraint firstItem="KwI-d1-ycX" firstAttribute="centerY" secondItem="YO7-3m-yjK" secondAttribute="centerY" constant="119" id="KMo-WI-n9e"/>
-                            <constraint firstItem="KtH-BX-4PB" firstAttribute="centerY" secondItem="YO7-3m-yjK" secondAttribute="centerY" constant="10.5" id="Oat-1M-55q"/>
-                            <constraint firstItem="KwI-d1-ycX" firstAttribute="centerX" secondItem="YO7-3m-yjK" secondAttribute="centerX" constant="75" id="W4Z-Bu-n3n"/>
-                            <constraint firstItem="iR9-zP-Dye" firstAttribute="trailing" secondItem="YO7-3m-yjK" secondAttribute="trailingMargin" id="X2Y-8z-pGz"/>
-                            <constraint firstItem="yQO-1K-9Kw" firstAttribute="centerY" secondItem="YO7-3m-yjK" secondAttribute="centerY" constant="119" id="Xbh-v4-sKh"/>
-                            <constraint firstItem="12n-lz-Mhr" firstAttribute="leading" secondItem="YO7-3m-yjK" secondAttribute="leadingMargin" id="aUF-PW-SSy"/>
-                            <constraint firstItem="KtH-BX-4PB" firstAttribute="leading" secondItem="12n-lz-Mhr" secondAttribute="trailing" constant="19" id="c5J-jH-aUG"/>
-                            <constraint firstItem="iR9-zP-Dye" firstAttribute="centerY" secondItem="YO7-3m-yjK" secondAttribute="centerY" constant="10.5" id="e3c-E8-PlD"/>
-                            <constraint firstItem="Nqh-B7-HRr" firstAttribute="centerY" secondItem="YO7-3m-yjK" secondAttribute="centerY" constant="-101" id="fjY-xI-5qE"/>
-                            <constraint firstItem="12n-lz-Mhr" firstAttribute="leading" secondItem="YO7-3m-yjK" secondAttribute="leadingMargin" id="lNp-Xt-ZkD"/>
-                            <constraint firstItem="Nqh-B7-HRr" firstAttribute="centerX" secondItem="YO7-3m-yjK" secondAttribute="centerX" constant="75" id="o0G-57-PRM"/>
-                            <constraint firstItem="lne-gd-6vo" firstAttribute="top" secondItem="YO7-3m-yjK" secondAttribute="topMargin" constant="10" id="pV9-br-TPC"/>
-                            <constraint firstItem="weh-3E-eOB" firstAttribute="centerX" secondItem="YO7-3m-yjK" secondAttribute="centerX" constant="-75" id="pvh-uo-TvT"/>
-                            <constraint firstItem="lne-gd-6vo" firstAttribute="centerX" secondItem="YO7-3m-yjK" secondAttribute="centerX" id="q3t-3i-WQk"/>
-                            <constraint firstItem="yQO-1K-9Kw" firstAttribute="centerX" secondItem="YO7-3m-yjK" secondAttribute="centerX" constant="-75" id="ri3-iY-ppY"/>
-                            <constraint firstItem="12n-lz-Mhr" firstAttribute="centerY" secondItem="YO7-3m-yjK" secondAttribute="centerY" constant="10.5" id="s1R-P8-ds5"/>
-                            <constraint firstItem="KtH-BX-4PB" firstAttribute="centerX" secondItem="YO7-3m-yjK" secondAttribute="centerX" id="vwM-FU-Pv1"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -184,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2UL-Bs-Tyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472" y="-35"/>
+            <point key="canvasLocation" x="652" y="-607"/>
         </scene>
         <!--Game Play View Controller-->
         <scene sceneID="oiE-ks-lb8">
@@ -285,7 +237,7 @@
                                     <action selector="gameOver:" destination="rKg-sQ-XTG" eventType="touchUpInside" id="RPs-Se-bhD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME OVER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJr-Ps-aaa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW GAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJr-Ps-aaa">
                                 <rect key="frame" x="213" y="99" width="75.5" height="16"/>
                                 <animations/>
                                 <constraints>
@@ -303,10 +255,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="break-time-symbol-of-a-timer-and-an-apple_318-71075.png" translatesAutoresizingMaskIntoConstraints="NO" id="eFf-Vg-fiq">
-                                <rect key="frame" x="128" y="33" width="64" height="64"/>
-                                <animations/>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -338,11 +286,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPA-I8-dNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1293" y="-576"/>
+            <point key="canvasLocation" x="1190" y="-578"/>
         </scene>
     </scenes>
     <resources>
-        <image name="break-time-symbol-of-a-timer-and-an-apple_318-71075.png" width="64" height="64"/>
+        <image name="biohazard" width="112" height="106"/>
+        <image name="cake walk" width="500" height="360"/>
         <image name="droid-vector" width="700" height="490"/>
     </resources>
 </document>
