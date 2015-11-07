@@ -13,6 +13,11 @@ import UIKit
 class gamePlayViewController: UIViewController, UITextFieldDelegate  {
     
     
+    @IBOutlet weak var restartLabel: UILabel!
+    @IBOutlet weak var gameOverLabel: UILabel!
+    
+    @IBOutlet weak var droidLabel: UIImageView!
+    
     @IBOutlet weak var timerLabel: UILabel!
     
     var timer: NSTimer?
@@ -27,6 +32,8 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
     
     @IBOutlet weak var answerTextField: UITextField!
     
+    
+    
 //    var count = 0
     
     func setupGame()  {
@@ -37,8 +44,13 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
 //        scoreLabel.text = "Score: \(count)"
     }
    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        answerTextField!.layer.borderWidth = 5
+        
+        answerTextField!.layer.borderColor = UIColor.blackColor().CGColor
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("subtractTime"), userInfo: nil, repeats: true)
         
@@ -54,10 +66,11 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
         
     }
     
-    @IBAction func gameOver(sender: AnyObject) {
-        
-        
+    
+    @IBAction func resetButton(sender: AnyObject) {
     }
+    
+
 
     func subtractTime() {
         seconds--

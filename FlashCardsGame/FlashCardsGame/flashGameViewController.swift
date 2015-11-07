@@ -10,6 +10,13 @@ import UIKit
 
 class flashGameViewController: UIViewController {
     
+    
+    @IBOutlet weak var threeMonkeysLabel: UIImageView!
+    
+    @IBOutlet weak var cakeWalkLabel: UIImageView!
+    
+    @IBOutlet weak var crazySmileLabel: UIImageView!
+    
     @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var firstDeck: MainButton!
