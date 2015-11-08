@@ -290,10 +290,10 @@
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PjO-Tr-f71">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PjO-Tr-f71">
                                 <rect key="frame" x="16" y="126" width="382" height="395"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is a very long question that cannot fit in a small space, so lets figure something out." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-ad-qXl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a very long question that cannot fit in a small space, so lets figure something out." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-ad-qXl">
                                         <rect key="frame" x="16" y="33" width="348" height="328"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -340,7 +340,6 @@
                             <constraint firstItem="BYY-2E-9h3" firstAttribute="leading" secondItem="1yT-lD-Moc" secondAttribute="leadingMargin" id="bXR-J3-LQO"/>
                             <constraint firstItem="vJr-Ps-aaa" firstAttribute="top" secondItem="aQR-BU-LK2" secondAttribute="bottom" constant="26.5" id="chR-D7-1fI"/>
                             <constraint firstItem="Ton-DB-HxR" firstAttribute="top" secondItem="1yT-lD-Moc" secondAttribute="topMargin" constant="5" id="fjP-Or-CAq"/>
-                            <constraint firstItem="BYY-2E-9h3" firstAttribute="width" secondItem="PjO-Tr-f71" secondAttribute="width" id="h4S-1u-MJh"/>
                             <constraint firstItem="oZ0-PA-uNs" firstAttribute="top" secondItem="dXD-Q1-Spz" secondAttribute="bottom" constant="120" id="irx-Mo-a8u"/>
                             <constraint firstItem="FUJ-Xa-lCS" firstAttribute="top" secondItem="jVq-YR-y83" secondAttribute="bottom" constant="20" id="jR6-qH-N1l"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BYY-2E-9h3" secondAttribute="trailing" id="k24-Yh-4aj"/>

@@ -81,21 +81,51 @@ class FlashGameViewController: UIViewController {
                 let deck1 = decks[0]
                 
                 self.firstDeck?.setTitle(deck1["title"] as? String, forState: .Normal)
+//                
+//                let numString = deck1["id"] as? String
+//                if let
+                
+                let deckId = deck1["id"] as? Int
+                
+//                let callInt = Int(deckId!)
                 
                 
+                self.firstDeck?.tag = deckId!
+            
                 // set tag = deck["id"]
                 
                 let deck2 = decks[1]
                 
                 self.secondDeck?.setTitle(deck2["title"] as? String, forState: .Normal)
+                
+                let deckId1 = deck2["id"] as? Int
+                
+//                let callInt1 = Int(deckId1!)
+                
+                self.secondDeck?.tag = deckId1!
+                
              
                 let deck3 = decks[2]
                 
                 self.thirdDeck?.setTitle(deck3["title"] as? String, forState: .Normal)
                 
+                let deckId2 = deck3["id"] as? Int
+                
+//                let callInt2 = Int(deckId2!)
+                
+                
+                self.thirdDeck?.tag = deckId2!
+                
                 let deck4 = decks[3]
                 
                 self.fourthDeck?.setTitle(deck4["title"] as? String, forState: .Normal)
+                
+                let deckId3 = deck4["id"] as? Int
+                
+//                let callInt3 = Int(deckId3!)
+                
+                
+                self.fourthDeck?.tag = deckId3!
             }
             
             
@@ -115,24 +145,26 @@ class FlashGameViewController: UIViewController {
         
         let gamePlayVC = storyboard?.instantiateViewControllerWithIdentifier("gamePlayVC") as! GamePlayViewController
         
-        switch sender.tag {
+//        switch sender.tag {
+//        
+//        case SelectedButtonTag.First.rawValue: 0
+//            print("do something when first button is tapped")
+//        
+//        case SelectedButtonTag.Second.rawValue: 1
+//            print("do something when second button is tapped")
+//        
+//        case SelectedButtonTag.Third.rawValue: 2
+//            print("do something when third button is tapped")
+//        
+//        case SelectedButtonTag.Fourth.rawValue: 3
+//        print("do something when third button is tapped")
+//        
+//        default:
+//            print("default")
+//        }
         
-        case SelectedButtonTag.First.rawValue: 0
-            print("do something when first button is tapped")
         
-        case SelectedButtonTag.Second.rawValue: 1
-            print("do something when second button is tapped")
-        
-        case SelectedButtonTag.Third.rawValue: 2
-            print("do something when third button is tapped")
-        
-        case SelectedButtonTag.Fourth.rawValue: 3
-        print("do something when third button is tapped")
-        
-        default:
-            print("default")
-        }
-        
+        gamePlayVC.deckID = sender.tag
         
         gamePlayVC.hardMode = hardModeSwitch.on
         

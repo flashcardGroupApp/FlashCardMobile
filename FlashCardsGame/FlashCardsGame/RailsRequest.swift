@@ -112,6 +112,8 @@ class RailsRequest: NSObject {
         
         let fullURLString = APIbaseURL + info.endpoint
         
+        print(fullURLString)
+        
         guard let url = NSURL(string: fullURLString) else { return } //add run completion with fail
         
         let request = NSMutableURLRequest(URL: url)
@@ -125,6 +127,8 @@ class RailsRequest: NSObject {
         if let token = token {
             
             request.setValue(token, forHTTPHeaderField: "Access-Token")
+            
+            print(token)
             
         }
         

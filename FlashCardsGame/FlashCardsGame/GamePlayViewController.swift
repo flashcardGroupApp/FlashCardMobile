@@ -10,29 +10,23 @@ import UIKit
 
 class GamePlayViewController: UIViewController, UITextFieldDelegate  {
     
-    
     @IBOutlet weak var combatImageView: UIImageView!
     @IBOutlet weak var restartLabel: UILabel!
     @IBOutlet weak var gameOverLabel: UILabel!
-    
     @IBOutlet weak var droidLabel: UIImageView!
-    
     @IBOutlet weak var timerLabel: UILabel!
     
     var timer: NSTimer?
     var seconds = 30
     var count = 0
-
     var hardMode: Bool = false
+    var deckID: Int = 0
     
     @IBOutlet weak var questionLabel: UILabel!
-    
-
-    
     @IBOutlet weak var answerTextField: UITextField!
     
-    
-
+    var cards: [[String:AnyObject]] = []
+    var currentCard: Int = 0
     
     func setupGame()  {
         seconds = 30
@@ -48,11 +42,26 @@ class GamePlayViewController: UIViewController, UITextFieldDelegate  {
         
 //        let topScore = GameData.mainData().topScore
         
-        
+        // make request for cards using deckID
 
+        var info = RequestInfo()
+        
+        info.endpoint = "/decks/6/cards"
+        info.method = .GET
+        
+        
+        RailsRequest.session().requiredWithInfo(info) { (returnedInfo) -> () in
+            
+            if let cards = returnedInfo as? [[String:AnyObject]] {
+                
+                self.cards = cards
+                self.populateQuestionLabel()
+                
+            }
+            
+        }
+        
         answerTextField!.layer.borderWidth = 10
-        
-        
         answerTextField!.layer.borderColor = UIColor.blackColor().CGColor
         
         if hardMode {
@@ -62,14 +71,36 @@ class GamePlayViewController: UIViewController, UITextFieldDelegate  {
         
         print("timer created")
         
-        
+    }
     
+    func populateQuestionLabel() {
+        
+        // set question label to the question of the current card
+        questionLabel.text = cards[currentCard]["question"] as? String
         
     }
     
     @IBAction func okayButton(sender: AnyObject) {
 
+        // if on last card ... alert user game over and go back to deck choice
+        
         // if correct answer add to currentScore (on singleton)
+        
+        let answer = cards[currentCard]["answer"] as! String
+        let guess = answerTextField.text ?? ""
+        
+        
+        if answer == guess {
+            
+            // if answer is true
+            currentCard++
+            populateQuestionLabel()
+            
+        } else {
+            
+            // do something since they failed
+            
+        }
         
     }
     
