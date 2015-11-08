@@ -28,14 +28,21 @@ class FlashGameViewController: UIViewController {
     @IBOutlet weak var threeMonkeysView: UIImageView!
     
     @IBOutlet weak var hardModeSwitch: UISwitch!
+    
     var score: Int = 0
+    
     var seconds = 30
+    
     var count = 0
     
     enum SelectedButtonTag: Int {
+    
         case First
+        
         case Second
+        
         case Third
+        
         case Fourth
     }
 
@@ -100,24 +107,25 @@ class FlashGameViewController: UIViewController {
 
     }
   
-    @IBAction func sliderButton(sender: UISwitch) {
-    
-        
-    }
- 
+     
     @IBAction func mainButton(sender: MainButton) {
         
         let gamePlayVC = storyboard?.instantiateViewControllerWithIdentifier("gamePlayVC") as! GamePlayViewController
         
         switch sender.tag {
+        
         case SelectedButtonTag.First.rawValue: 0
             print("do something when first button is tapped")
+        
         case SelectedButtonTag.Second.rawValue: 1
             print("do something when second button is tapped")
+        
         case SelectedButtonTag.Third.rawValue: 2
             print("do something when third button is tapped")
+        
         case SelectedButtonTag.Fourth.rawValue: 3
         print("do something when third button is tapped")
+        
         default:
             print("default")
         }

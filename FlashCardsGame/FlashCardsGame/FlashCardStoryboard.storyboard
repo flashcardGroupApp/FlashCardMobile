@@ -56,12 +56,9 @@
                                     <action selector="mainButton:" destination="ch6-RC-Q7b" eventType="touchUpInside" id="KmV-QX-bWo"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KtH-BX-4PB">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KtH-BX-4PB">
                                 <rect key="frame" x="135" y="268" width="51" height="31"/>
                                 <animations/>
-                                <connections>
-                                    <action selector="sliderButton:" destination="ch6-RC-Q7b" eventType="valueChanged" id="yQw-sF-gJf"/>
-                                </connections>
                             </switch>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cake walk" translatesAutoresizingMaskIntoConstraints="NO" id="yhX-T2-2gQ">
                                 <rect key="frame" x="20" y="264" width="130" height="40"/>
