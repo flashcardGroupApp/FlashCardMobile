@@ -26,6 +26,7 @@ class GamePlayViewController: UIViewController, UITextFieldDelegate  {
     var count = 0
 
     var hardMode: Bool = false
+    // deck id variable
     
     @IBOutlet weak var questionLabel: UILabel!
     

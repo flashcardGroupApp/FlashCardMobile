@@ -75,6 +75,9 @@ class FlashGameViewController: UIViewController {
                 
                 self.firstDeck?.setTitle(deck1["title"] as? String, forState: .Normal)
                 
+                
+                // set tag = deck["id"]
+                
                 let deck2 = decks[1]
                 
                 self.secondDeck?.setTitle(deck2["title"] as? String, forState: .Normal)
