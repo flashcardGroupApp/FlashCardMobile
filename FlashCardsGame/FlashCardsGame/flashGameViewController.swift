@@ -30,6 +30,8 @@ class flashGameViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
     
+        
+        
         self.navigationController?.navigationBarHidden = true
         
         var info = RequestInfo()
@@ -43,8 +45,10 @@ class flashGameViewController: UIViewController {
             
             print(returnedInfo)
             
-            
-            if let decks = returnedInfo as? [[String:AnyObject]] {
+            //sets the deck with "title" information gathered from server
+            if var decks = returnedInfo as? [[String:AnyObject]] {
+                
+                decks = decks.sort{ (_, _) -> Bool in arc4random() % 2 == 0 }
                 
                 let deck1 = decks[0]
                 
@@ -71,15 +75,18 @@ class flashGameViewController: UIViewController {
             
         }
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func switchSlider(sender: AnyObject) {
+    
     }
 
+    
     @IBAction func pressedButton(sender: AnyObject) {
         
         let gamePlayVC = storyboard?.instantiateViewControllerWithIdentifier("gamePlayVC") as! gamePlayViewController
+        
+        // set hardmode property
         
         self.presentViewController(gamePlayVC, animated:true, completion:nil)
      

@@ -74,6 +74,7 @@ class LoginViewController: UIViewController, UIWebViewDelegate {
             if let flashVC = loginSB.instantiateInitialViewController() {
                 
                 self.navigationController?.setViewControllers([flashVC], animated: true)
+            
             }
         
         })

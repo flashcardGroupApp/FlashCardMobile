@@ -66,6 +66,7 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
         if(seconds == 0)  {
             
             timer?.invalidate()
+            endGame()
             
         }
         
@@ -73,7 +74,13 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
     }
     
     
-    
+    func endGame() {
+        
+        let gamePlayVC = storyboard?.instantiateViewControllerWithIdentifier("gameVC") as! flashGameViewController
+        
+        self.presentViewController(gamePlayVC, animated:true, completion:nil)
+        
+    }
     
 
     
