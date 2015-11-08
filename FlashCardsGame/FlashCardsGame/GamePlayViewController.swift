@@ -10,16 +10,22 @@ import UIKit
 
 
 
-class gamePlayViewController: UIViewController, UITextFieldDelegate  {
+class GamePlayViewController: UIViewController, UITextFieldDelegate  {
     
+    
+    @IBOutlet weak var combatImageView: UIImageView!
+    @IBOutlet weak var restartLabel: UILabel!
+    @IBOutlet weak var gameOverLabel: UILabel!
+    
+    @IBOutlet weak var droidLabel: UIImageView!
     
     @IBOutlet weak var timerLabel: UILabel!
     
     var timer: NSTimer?
     var seconds = 30
     var count = 0
-   
-    
+
+    var hardMode: Bool = false
     
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -27,18 +33,29 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
     
     @IBOutlet weak var answerTextField: UITextField!
     
-//    var count = 0
+    
+
     
     func setupGame()  {
         seconds = 30
         count = 0
         
         timerLabel.text = "Time: \(seconds)"
-//        scoreLabel.text = "Score: \(count)"
+
     }
    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let topScore = GameData.mainData().topScore
+        
+        
+
+        answerTextField!.layer.borderWidth = 10
+        
+        
+        answerTextField!.layer.borderColor = UIColor.blackColor().CGColor
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("subtractTime"), userInfo: nil, repeats: true)
         
@@ -51,15 +68,20 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
     
     @IBAction func okayButton(sender: AnyObject) {
 
+        // if correct answer add to currentScore (on singleton)
         
     }
     
-    @IBAction func gameOver(sender: AnyObject) {
-        
+    
+    @IBAction func resetButton(sender: AnyObject) {
         
     }
+    
+
 
     func subtractTime() {
+        
+        
         seconds--
         timerLabel.text = "Time: \(seconds)"
         
@@ -68,28 +90,23 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
             timer?.invalidate()
             endGame()
             
+            
+     
         }
         
         print("boom")
     }
     
-    
     func endGame() {
         
-        let gamePlayVC = storyboard?.instantiateViewControllerWithIdentifier("gameVC") as! flashGameViewController
+        let gamePlayVC = storyboard?.instantiateViewControllerWithIdentifier("gameVC") as! FlashGameViewController
         
         self.presentViewController(gamePlayVC, animated:true, completion:nil)
         
     }
     
-
-    
-    
-       
-      
-    
-
-    }
+  
+}
  
     
             

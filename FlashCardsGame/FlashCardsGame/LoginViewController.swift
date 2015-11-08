@@ -37,7 +37,7 @@ class LoginViewController: UIViewController, UIWebViewDelegate {
         
             print("loged in finished")
             
-            let loginSB = UIStoryboard(name: "flashCardStoryboard", bundle: nil)
+            let loginSB = UIStoryboard(name: "FlashCardStoryboard", bundle: nil)
             
             if let flashVC = loginSB.instantiateInitialViewController() {
                 
@@ -69,7 +69,7 @@ class LoginViewController: UIViewController, UIWebViewDelegate {
 
             
             
-            let loginSB = UIStoryboard(name: "flashCardStoryboard", bundle: nil)
+            let loginSB = UIStoryboard(name: "FlashCardStoryboard", bundle: nil)
             
             if let flashVC = loginSB.instantiateInitialViewController() {
                 
