@@ -8,35 +8,50 @@
 
 import UIKit
 
-class flashGameViewController: UIViewController {
-    
-    
-    @IBOutlet weak var threeMonkeysLabel: UIImageView!
-    
-    @IBOutlet weak var cakeWalkLabel: UIImageView!
-    
-    @IBOutlet weak var crazySmileLabel: UIImageView!
+
+class FlashGameViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
-    
+
     @IBOutlet weak var firstDeck: MainButton!
+
     @IBOutlet weak var secondDeck: MainButton!
+    
+    @IBOutlet weak var cakeWalkView: UIImageView!
+    
+    @IBOutlet weak var crazySmileView: UIImageView!
+    
     @IBOutlet weak var thirdDeck: MainButton!
+    
     @IBOutlet weak var fourthDeck: MainButton!
     
-    var totalTime: NSTimeInterval = 0
+    @IBOutlet weak var threeMonkeysView: UIImageView!
+    
+    var score: Int = 0
     var seconds = 30
     var count = 0
+    
+    enum SelectedButtonTag: Int {
+        case First
+        case Second
+        case Third
+        case Fourth
+    }
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scoreLabel.text = "Time: \(totalTime)"
+        scoreLabel.text = "Score: \(score)"
         
     }
+ 
     
     override func viewDidAppear(animated: Bool) {
     
+        // update score from singleton
+        
         self.navigationController?.navigationBarHidden = true
         
         var info = RequestInfo()
@@ -50,6 +65,8 @@ class flashGameViewController: UIViewController {
             
             print(returnedInfo)
             
+        
+           
             
             if let decks = returnedInfo as? [[String:AnyObject]] {
                 
@@ -77,19 +94,42 @@ class flashGameViewController: UIViewController {
             }
             
         }
+        
+        
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func switchSlider(sender: AnyObject) {
+    @IBAction func sliderButton(sender: UISwitch) {
     }
-
-    @IBAction func pressedButton(sender: AnyObject) {
+ 
+    @IBAction func mainButton(sender: MainButton) {
         
-        let gamePlayVC = storyboard?.instantiateViewControllerWithIdentifier("gamePlayVC") as! gamePlayViewController
+        switch sender.tag {
+        case SelectedButtonTag.First.rawValue: 0
+            print("do something when first button is tapped")
+        case SelectedButtonTag.Second.rawValue: 1
+            print("do something when second button is tapped")
+        case SelectedButtonTag.Third.rawValue: 2
+            print("do something when third button is tapped")
+        case SelectedButtonTag.Fourth.rawValue: 3
+        print("do something when third button is tapped")
+        default:
+            print("default")
+        }
+        
+        
+        let gamePlayVC = storyboard?.instantiateViewControllerWithIdentifier("gamePlayVC") as! GamePlayViewController
         
         self.presentViewController(gamePlayVC, animated:true, completion:nil)
-     
     }
+   
+    }
+
+
+        
+
+     
+
     
-}
+

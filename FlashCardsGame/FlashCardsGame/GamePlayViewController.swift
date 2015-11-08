@@ -10,9 +10,10 @@ import UIKit
 
 
 
-class gamePlayViewController: UIViewController, UITextFieldDelegate  {
+class GamePlayViewController: UIViewController, UITextFieldDelegate  {
     
     
+    @IBOutlet weak var combatImageView: UIImageView!
     @IBOutlet weak var restartLabel: UILabel!
     @IBOutlet weak var gameOverLabel: UILabel!
     
@@ -23,7 +24,7 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
     var timer: NSTimer?
     var seconds = 30
     var count = 0
-   
+
     
     
     @IBOutlet weak var questionLabel: UILabel!
@@ -33,22 +34,26 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
     @IBOutlet weak var answerTextField: UITextField!
     
     
-    
-//    var count = 0
+
     
     func setupGame()  {
         seconds = 30
         count = 0
         
         timerLabel.text = "Time: \(seconds)"
-//        scoreLabel.text = "Score: \(count)"
+
     }
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        answerTextField!.layer.borderWidth = 5
+//        let topScore = GameData.mainData().topScore
+        
+        
+
+        answerTextField!.layer.borderWidth = 10
+        
         
         answerTextField!.layer.borderColor = UIColor.blackColor().CGColor
         
@@ -63,16 +68,20 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
     
     @IBAction func okayButton(sender: AnyObject) {
 
+        // if correct answer add to currentScore (on singleton)
         
     }
     
     
     @IBAction func resetButton(sender: AnyObject) {
+        
     }
     
 
 
     func subtractTime() {
+        
+        
         seconds--
         timerLabel.text = "Time: \(seconds)"
         
@@ -80,22 +89,16 @@ class gamePlayViewController: UIViewController, UITextFieldDelegate  {
             
             timer?.invalidate()
             
+            
+     
         }
         
         print("boom")
     }
     
-    
-    
-    
 
-    
-    
-       
-      
-    
-
-    }
+  
+}
  
     
             
