@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class GamePlayViewController: UIViewController, UITextFieldDelegate  {
     
     
@@ -26,7 +24,6 @@ class GamePlayViewController: UIViewController, UITextFieldDelegate  {
     var count = 0
 
     var hardMode: Bool = false
-    // deck id variable
     
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -58,7 +55,10 @@ class GamePlayViewController: UIViewController, UITextFieldDelegate  {
         
         answerTextField!.layer.borderColor = UIColor.blackColor().CGColor
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("subtractTime"), userInfo: nil, repeats: true)
+        if hardMode {
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("subtractTime"), userInfo: nil, repeats: true)
+        }
         
         print("timer created")
         
@@ -75,6 +75,10 @@ class GamePlayViewController: UIViewController, UITextFieldDelegate  {
     
     
     @IBAction func resetButton(sender: AnyObject) {
+        
+        let gamePlayVC = storyboard?.instantiateViewControllerWithIdentifier("gameVC") as! FlashGameViewController
+        
+        self.presentViewController(gamePlayVC, animated:true, completion:nil)
         
     }
     
