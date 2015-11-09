@@ -58,7 +58,7 @@ class FlashGameViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
     
-        // update score from singleton
+        scoreLabel.text = "Score: \(GameData.mainData().correctCards)"
         
         self.navigationController?.navigationBarHidden = true
         
