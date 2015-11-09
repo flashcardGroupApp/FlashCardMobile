@@ -28,6 +28,8 @@ class GamePlayViewController: UIViewController, UITextFieldDelegate  {
     var cards: [[String:AnyObject]] = []
     var currentCard: Int = 0
     
+    
+    
     func setupGame()  {
         seconds = 30
         count = 0
@@ -35,10 +37,33 @@ class GamePlayViewController: UIViewController, UITextFieldDelegate  {
         timerLabel.text = "Time: \(seconds)"
 
     }
-   
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        let answer = cards[currentCard]["answer"] as! String
+        if let guess = textField.text {
+            
+            
+        if guess == answer {
+            
+            currentCard++
+            
+            populateQuestionLabel()
+            
+            
+            }
+           
+            
+        }
+        
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        GameData.mainData().correctCards = 0
+        
+        answerTextField.delegate = self
         
 //        let topScore = GameData.mainData().topScore
         
@@ -48,6 +73,8 @@ class GamePlayViewController: UIViewController, UITextFieldDelegate  {
         
         info.endpoint = "/decks/6/cards"
         info.method = .GET
+        
+   
         
         
         RailsRequest.session().requiredWithInfo(info) { (returnedInfo) -> () in
@@ -94,7 +121,9 @@ class GamePlayViewController: UIViewController, UITextFieldDelegate  {
             
             // if answer is true
             currentCard++
+            GameData.mainData().correctCards++
             populateQuestionLabel()
+            answerTextField.text = ""
             
         } else {
             

@@ -17,7 +17,7 @@ class GameData: NSObject {
     class func mainData() -> GameData { return _mainData }
     
     
-    var totalCards = 0
+    var correctCards = 0
     
   
     
