@@ -16,22 +16,52 @@ class GamePlayViewController: UIViewController, UITextFieldDelegate  {
     @IBOutlet weak var droidLabel: UIImageView!
     @IBOutlet weak var timerLabel: UILabel!
     
+    /// creates a variable of "timer" and sets it as NSTimer
     var timer: NSTimer?
+    
+    /// creates a variable of seconds and sets it to 30
     var seconds = 30
+    
+    /// creates a variable of count and sets it to 0
     var count = 0
+    
+    /// creates variable of hardMode of type Bool and sets it to false (Bool is only true/false)
     var hardMode: Bool = false
+    
+    /// creates variable of deckID of type Int and sets it to 0
     var deckID: Int = 0
     
+    /// creates a visual outlet called "questionLabel" of type UILabel (which is force-unwrapped)
     @IBOutlet weak var questionLabel: UILabel!
+   
+    /// creates a visual outlet called "answerTextField" of type UITextField (shich is force-unwrapped)
     @IBOutlet weak var answerTextField: UITextField!
     
+    /// creates variable cards of type Dictionary and sets it to an EMPTY Array
     var cards: [[String:AnyObject]] = []
+    
+    /// creates a variable currentCard of type Int and sets it to 0
     var currentCard: Int = 0
     
+    
+    /**
+     Creates a "setupGame" function
+     */
     func setupGame()  {
+        
+        /**
+        sets the seconds to 30 as part of the setupGame
+        */
         seconds = 30
+        
+        /**
+        sets the count to 0 as part of the setupGame
+        */
         count = 0
         
+        /**
+        sets the "timerLabel.text" to String of "Time: injected with \(seconds) parameter.
+        */
         timerLabel.text = "Time: \(seconds)"
 
     }
@@ -114,13 +144,23 @@ class GamePlayViewController: UIViewController, UITextFieldDelegate  {
     }
     
 
-
+    /**
+     creates the timer function that counts down.
+     */
     func subtractTime() {
-        
+        /**
+        *  Operates the timer
+        *
+        *  @param seconds counts down the seconds
+        *
+        *  @return timerLabel with the seconds
+        */
         
         seconds--
         timerLabel.text = "Time: \(seconds)"
-        
+        /**
+        *  If the timer reaches 0 then timer stops and "endGame" condition is tripped.
+        */
         if(seconds == 0)  {
             
             timer?.invalidate()
@@ -132,11 +172,15 @@ class GamePlayViewController: UIViewController, UITextFieldDelegate  {
         
         print("boom")
     }
-    
+    /**
+     Sets up when game ends the user is taken back to the "FlashGameViewController"
+     */
     func endGame() {
-        
+ /// This returns the user to the "FlashGameViewController"
         let gamePlayVC = storyboard?.instantiateViewControllerWithIdentifier("gameVC") as! FlashGameViewController
-        
+        /**
+        *  Presents the "FlashGameViewController"
+        */
         self.presentViewController(gamePlayVC, animated:true, completion:nil)
         
     }
