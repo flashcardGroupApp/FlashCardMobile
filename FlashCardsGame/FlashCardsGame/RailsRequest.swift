@@ -54,14 +54,12 @@ class RailsRequest: NSObject {
             "password" : password
             
         ]
-        
+
         requiredWithInfo(info) { (returnedInfo) -> () in
             
             if let user = returnedInfo?["user"] as? [String:AnyObject] {
                 
                 if let key = user["auth_token"] as? String {
-                    
-                    
                     
                     self.token = key
                     
