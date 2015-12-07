@@ -145,25 +145,6 @@ class FlashGameViewController: UIViewController {
         
         let gamePlayVC = storyboard?.instantiateViewControllerWithIdentifier("gamePlayVC") as! GamePlayViewController
         
-//        switch sender.tag {
-//        
-//        case SelectedButtonTag.First.rawValue: 0
-//            print("do something when first button is tapped")
-//        
-//        case SelectedButtonTag.Second.rawValue: 1
-//            print("do something when second button is tapped")
-//        
-//        case SelectedButtonTag.Third.rawValue: 2
-//            print("do something when third button is tapped")
-//        
-//        case SelectedButtonTag.Fourth.rawValue: 3
-//        print("do something when third button is tapped")
-//        
-//        default:
-//            print("default")
-//        }
-        
-        
         gamePlayVC.deckID = sender.tag
         
         gamePlayVC.hardMode = hardModeSwitch.on

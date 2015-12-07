@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 private let _mainData = GameData()
 
 class GameData: NSObject {

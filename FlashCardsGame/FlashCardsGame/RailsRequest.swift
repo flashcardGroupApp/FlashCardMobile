@@ -16,9 +16,15 @@ private let _rr = RailsRequest()
 private let _d = NSUserDefaults.standardUserDefaults()
 
 class RailsRequest: NSObject {
-    
+   
+    /**
+     Creates a class function for the "RailsRequest"class
+     
+     - returns: the "RailsRequest"
+     */
     class func session() -> RailsRequest { return _rr }
     
+    /// The token captured after login/register used to make authenticated API calls.
     var token: String? {
         
         get { return _d.objectForKey("token") as? String }
@@ -28,6 +34,12 @@ class RailsRequest: NSObject {
     //will need out own server info
     private let APIbaseURL = "http://secret-shore-7735.herokuapp.com"
     
+    /**
+     This method will try to login a user with credentials below.
+     
+     - parameter username: The name used when registering.
+     - parameter password: The password used when registering.
+     */
     func loginWithUsername(username: String, andPassword password: String, completion: () -> ()) {
         
         var info = RequestInfo()
@@ -42,14 +54,12 @@ class RailsRequest: NSObject {
             "password" : password
             
         ]
-        
+
         requiredWithInfo(info) { (returnedInfo) -> () in
             
             if let user = returnedInfo?["user"] as? [String:AnyObject] {
                 
                 if let key = user["auth_token"] as? String {
-                    
-                    
                     
                     self.token = key
                     
@@ -67,6 +77,13 @@ class RailsRequest: NSObject {
         
     }
     
+    /**
+     Makes a generic request to the API, configured by the info parameter.
+     
+     - parameter info:       Used to configure the API request.
+     - parameter completion: A completion black that may be calld with an optional object.
+     The object could be an Array or Dictionary, YOU MUST handle the type within the completion black.
+     */
     func registerWithUsername(username: String, andPassword password: String, email: String, completion: () -> ()) {
         
         var info = RequestInfo()
