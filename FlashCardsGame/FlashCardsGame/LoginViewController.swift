@@ -78,11 +78,9 @@ class LoginViewController: UIViewController, UIWebViewDelegate {
             }
         
         })
-        
 
         
-
     }
     
-    }
+}
     
